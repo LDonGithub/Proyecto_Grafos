@@ -34,6 +34,34 @@ function draw() {
   var options = {
     layout: { randomSeed: seed }, // just to make sure the layout is the same when the locale is changed
     locale: document.getElementById("locale").value,
+    edges:{
+      arrows: {
+        to: {
+          enabled: true,
+          imageHeight: undefined,
+          imageWidth: undefined,
+          scaleFactor: 1,
+          src: undefined,
+          type: "arrow"
+        },
+        middle: {
+          enabled: false,
+          imageHeight: 32,
+          imageWidth: 32,
+          scaleFactor: 1,
+          src: "https://visjs.org/images/visjs_logo.png",
+          type: "image"
+        },
+        from: {
+          enabled: true,
+          imageHeight: undefined,
+          imageWidth: undefined,
+          scaleFactor: 1,
+          src: undefined,
+          type: "arrow"
+        }
+      }
+    },
     manipulation: {
       addNode: function (data, callback) {
         // filling in the popup DOM elements
